@@ -12,6 +12,7 @@ import ComposableArchitecture
 struct The_Composable_Architecture_iOS__ExampleApp: App {
     static let store = Store(initialState: CounterFeature.State()) {
         CounterFeature()
+            ._printChanges()
     }
     
     var body: some Scene {
