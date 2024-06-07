@@ -10,12 +10,14 @@ import ComposableArchitecture
 
 @main
 struct The_Composable_Architecture_iOS__ExampleApp: App {
+    static let store = Store(initialState: CounterFeature.State()) {
+        CounterFeature()
+    }
+    
     var body: some Scene {
         WindowGroup {
             CounterView(
-                store: Store(initialState: CounterFeature.State()) {
-                    CounterFeature()
-                }
+                store: The_Composable_Architecture_iOS__ExampleApp.store
             )
         }
     }
