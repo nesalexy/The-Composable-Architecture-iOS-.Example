@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		787653B12C13643F0086FBFC /* The_Composable_Architecture_iOS__ExampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787653B02C13643F0086FBFC /* The_Composable_Architecture_iOS__ExampleApp.swift */; };
-		787653B32C13643F0086FBFC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787653B22C13643F0086FBFC /* ContentView.swift */; };
 		787653B52C1364410086FBFC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 787653B42C1364410086FBFC /* Assets.xcassets */; };
 		787653B82C1364410086FBFC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 787653B72C1364410086FBFC /* Preview Assets.xcassets */; };
 		787653C22C1364410086FBFC /* The_Composable_Architecture_iOS__ExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787653C12C1364410086FBFC /* The_Composable_Architecture_iOS__ExampleTests.swift */; };
@@ -38,7 +37,6 @@
 /* Begin PBXFileReference section */
 		787653AD2C13643F0086FBFC /* The Composable Architecture(iOS).Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "The Composable Architecture(iOS).Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		787653B02C13643F0086FBFC /* The_Composable_Architecture_iOS__ExampleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = The_Composable_Architecture_iOS__ExampleApp.swift; sourceTree = "<group>"; };
-		787653B22C13643F0086FBFC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		787653B42C1364410086FBFC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		787653B72C1364410086FBFC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		787653BD2C1364410086FBFC /* The Composable Architecture(iOS).ExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "The Composable Architecture(iOS).ExampleTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -101,7 +99,6 @@
 			children = (
 				787653B02C13643F0086FBFC /* The_Composable_Architecture_iOS__ExampleApp.swift */,
 				787653DB2C13682D0086FBFC /* CounterFeature.swift */,
-				787653B22C13643F0086FBFC /* ContentView.swift */,
 				787653B42C1364410086FBFC /* Assets.xcassets */,
 				787653B62C1364410086FBFC /* Preview Content */,
 			);
@@ -277,7 +274,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				787653DC2C13682D0086FBFC /* CounterFeature.swift in Sources */,
-				787653B32C13643F0086FBFC /* ContentView.swift in Sources */,
 				787653B12C13643F0086FBFC /* The_Composable_Architecture_iOS__ExampleApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
