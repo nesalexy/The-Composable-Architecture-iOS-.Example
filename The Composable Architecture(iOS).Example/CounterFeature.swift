@@ -84,7 +84,7 @@ struct CounterFeature {
                             await send(.timerTick)
                         }
                     }
-                    /// store timer ID
+                    /// cancel all preview tasks with the same ID and store current one
                     .cancellable(id: CancelID.timer)
                 } else {
                     /// stop timer. Based on preview stored timerID
