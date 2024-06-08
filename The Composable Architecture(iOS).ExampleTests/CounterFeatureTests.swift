@@ -11,8 +11,10 @@ import XCTest
 
 /// I'm impressed with the way the tests are made
 @MainActor
-final class CounterFeatureTests: XCTestCase {
-    
+final class CounterFeatureTests: XCTestCase { }
+
+// MARK: - Testing regular cases
+extension CounterFeatureTests {
     /// testing regular value
     func testCounter() async {
         let store = TestStore(initialState: CounterFeature.State()) {
@@ -24,6 +26,53 @@ final class CounterFeatureTests: XCTestCase {
         }
         await store.send(.decrementButtonTapped) {
             $0.count = 0
+        }
+        
+        /// `store.exhaustivity = .off`
+        /// test the integration of many complex features,
+        /// without needing to assert on everything in the feature. Example bellow
+//        store.exhaustivity = .off
+//        await store.send(.incrementButtonTapped)
+//        await store.send(.decrementButtonTapped) {
+//            $0.count = 0
+//        }
+        
+        /// another example with using XCTAssertEqual
+//        store.exhaustivity = .off
+//        await store.send(.incrementButtonTapped) {
+//            XCTAssertEqual($0.count, 1)
+//        }
+//        await store.send(.decrementButtonTapped) {
+//            $0.count = 0
+//        }
+    }
+}
+
+// MARK: - Testing effects
+extension CounterFeatureTests {
+    func testTimer() async {
+        let store = TestStore(initialState: CounterFeature.State()) {
+            CounterFeature()
+        }
+        
+        await store.send(.toggleTimerButtonTapped) {
+            $0.isTimerRunning = true
+        }
+        
+        await store.receive(\.timerTick) {
+            $0.count = 1
+        }
+        
+        await store.receive(\.timerTick) {
+            $0.count = 2
+        }
+        
+        await store.receive(\.timerTick) {
+            $0.count = 3
+        }
+        
+        await store.send(.toggleTimerButtonTapped) {
+            $0.isTimerRunning = false
         }
     }
 }
