@@ -45,6 +45,7 @@
 		787653CB2C1364410086FBFC /* The_Composable_Architecture_iOS__ExampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = The_Composable_Architecture_iOS__ExampleUITests.swift; sourceTree = "<group>"; };
 		787653CD2C1364410086FBFC /* The_Composable_Architecture_iOS__ExampleUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = The_Composable_Architecture_iOS__ExampleUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		787653DB2C13682D0086FBFC /* CounterFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterFeature.swift; sourceTree = "<group>"; };
+		787653E22C144E450086FBFC /* The-Composable-Architecture-iOS--Example-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "The-Composable-Architecture-iOS--Example-Info.plist"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +98,7 @@
 		787653AF2C13643F0086FBFC /* The Composable Architecture(iOS).Example */ = {
 			isa = PBXGroup;
 			children = (
+				787653E22C144E450086FBFC /* The-Composable-Architecture-iOS--Example-Info.plist */,
 				787653B02C13643F0086FBFC /* The_Composable_Architecture_iOS__ExampleApp.swift */,
 				787653DB2C13682D0086FBFC /* CounterFeature.swift */,
 				787653B42C1364410086FBFC /* Assets.xcassets */,
@@ -440,6 +442,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"The Composable Architecture(iOS).Example/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "The-Composable-Architecture-iOS--Example-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -468,6 +471,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"The Composable Architecture(iOS).Example/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "The-Composable-Architecture-iOS--Example-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
