@@ -12,9 +12,9 @@ import SwiftUI
 struct CounterFeature {
     struct State: Equatable {
         var count = 0
-        
         var fact: String?
         var isLoading = false
+        var isTimerRunning = false
     }
     
     enum Action {
@@ -22,12 +22,18 @@ struct CounterFeature {
         case incrementButtonTapped
         case resetButtonTapped
         
-        /// making request. `Side Effect`
+        /// `Side Effect` for making request.
         case factButtonTapped
-        
-        /// response. `Side Effect`
+        /// `Side Effect` for response.
         case factResponse(fact: String)
+        
+        /// `Side Effect` timer
+        case toggleTimerButtonTapped
+        case timerTick
     }
+    
+    /// store id for cancel timer work
+    enum CancelID { case timer }
     
     var body: some ReducerOf<Self> {
         Reduce { state, action in
@@ -44,8 +50,8 @@ struct CounterFeature {
                 state.count = 0
                 state.fact = nil
                 return .none
-            
-            /// `Side Effect`. Request
+                
+            /// `Side Effect` with Request
             case .factButtonTapped:
                 state.fact = nil
                 state.isLoading = true
@@ -55,17 +61,39 @@ struct CounterFeature {
                 return .run { [count = state.count] send in
                     /// async work
                     let (data, _) = try await URLSession.shared
-                                .data(from: URL(string: "http://numbersapi.com/\(count)")!)
+                        .data(from: URL(string: "http://numbersapi.com/\(count)")!)
                     let fact = String(decoding: data, as: UTF8.self)
                     
                     /// send - @MainActor, need call with `await`
                     await send(.factResponse(fact: fact))
                 }
                 
-            /// `Side Effect`. Response
+            /// `Side Effect` with Response
             case .factResponse(let fact):
                 state.isLoading = false
                 state.fact = fact
+                return .none
+            
+            /// `Side Effect` with  Timer
+            case .toggleTimerButtonTapped:
+                state.isTimerRunning.toggle()
+                if state.isTimerRunning {
+                    return .run { send in
+                        while true {
+                            try await Task.sleep(for: .seconds(1))
+                            await send(.timerTick)
+                        }
+                    }
+                    /// store timer ID
+                    .cancellable(id: CancelID.timer)
+                } else {
+                    /// stop timer. Based on preview stored timerID
+                    return .cancel(id: CancelID.timer)
+                }
+            /// `Side Effect` with increment Timer
+            case .timerTick:
+                state.count += 1
+                state.fact = nil
                 return .none
             }
         }
@@ -108,6 +136,15 @@ struct CounterView: View {
                     .background(Color.black.opacity(0.1))
                     .cornerRadius(10)
                 }
+                
+                Button(viewStore.isTimerRunning ? "Stop timer" : "Start timer") {
+                    viewStore.send(.toggleTimerButtonTapped)
+                }
+                .font(.largeTitle)
+                .padding()
+                .background(Color.black.opacity(0.1))
+                .cornerRadius(10)
+                
                 Button("Fact") {
                     viewStore.send(.factButtonTapped)
                 }
