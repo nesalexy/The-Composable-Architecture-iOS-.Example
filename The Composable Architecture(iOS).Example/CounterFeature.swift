@@ -35,6 +35,9 @@ struct CounterFeature {
     /// store id for cancel timer work
     enum CancelID { case timer }
     
+    //@Dependency(\.continuousClock) var clock
+    @Dependency(\.numberFact) var numberFact
+    
     var body: some ReducerOf<Self> {
         Reduce { state, action in
             switch action {
@@ -51,7 +54,7 @@ struct CounterFeature {
                 state.fact = nil
                 return .none
                 
-            /// `Side Effect` with Request
+                /// `Side Effect` with Request
             case .factButtonTapped:
                 state.fact = nil
                 state.isLoading = true
@@ -60,21 +63,18 @@ struct CounterFeature {
                 /// can be replaced by publisher
                 return .run { [count = state.count] send in
                     /// async work
-                    let (data, _) = try await URLSession.shared
-                        .data(from: URL(string: "http://numbersapi.com/\(count)")!)
-                    let fact = String(decoding: data, as: UTF8.self)
-                    
+                    let fact = try await numberFact.fetch(count)
                     /// send - @MainActor, need call with `await`
                     await send(.factResponse(fact: fact))
                 }
                 
-            /// `Side Effect` with Response
+                /// `Side Effect` with Response
             case .factResponse(let fact):
                 state.isLoading = false
                 state.fact = fact
                 return .none
-            
-            /// `Side Effect` with  Timer
+                
+                /// `Side Effect` with  Timer
             case .toggleTimerButtonTapped:
                 state.isTimerRunning.toggle()
                 if state.isTimerRunning {
@@ -90,7 +90,7 @@ struct CounterFeature {
                     /// stop timer. Based on preview stored timerID
                     return .cancel(id: CancelID.timer)
                 }
-            /// `Side Effect` with increment Timer
+                /// `Side Effect` with increment Timer
             case .timerTick:
                 state.count += 1
                 state.fact = nil

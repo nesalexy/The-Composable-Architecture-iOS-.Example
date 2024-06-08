@@ -16,6 +16,7 @@
 		787653DC2C13682D0086FBFC /* CounterFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787653DB2C13682D0086FBFC /* CounterFeature.swift */; };
 		787653DF2C1369570086FBFC /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 787653DE2C1369570086FBFC /* ComposableArchitecture */; };
 		787653E42C14782F0086FBFC /* CounterFeatureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787653E32C14782F0086FBFC /* CounterFeatureTests.swift */; };
+		787653E82C14816E0086FBFC /* NumberFactClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787653E72C14816E0086FBFC /* NumberFactClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		787653DB2C13682D0086FBFC /* CounterFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterFeature.swift; sourceTree = "<group>"; };
 		787653E22C144E450086FBFC /* The-Composable-Architecture-iOS--Example-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "The-Composable-Architecture-iOS--Example-Info.plist"; sourceTree = SOURCE_ROOT; };
 		787653E32C14782F0086FBFC /* CounterFeatureTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterFeatureTests.swift; sourceTree = "<group>"; };
+		787653E72C14816E0086FBFC /* NumberFactClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberFactClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 			children = (
 				787653E22C144E450086FBFC /* The-Composable-Architecture-iOS--Example-Info.plist */,
 				787653B02C13643F0086FBFC /* The_Composable_Architecture_iOS__ExampleApp.swift */,
+				787653E72C14816E0086FBFC /* NumberFactClient.swift */,
 				787653DB2C13682D0086FBFC /* CounterFeature.swift */,
 				787653B42C1364410086FBFC /* Assets.xcassets */,
 				787653B62C1364410086FBFC /* Preview Content */,
@@ -280,6 +283,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				787653E82C14816E0086FBFC /* NumberFactClient.swift in Sources */,
 				787653DC2C13682D0086FBFC /* CounterFeature.swift in Sources */,
 				787653B12C13643F0086FBFC /* The_Composable_Architecture_iOS__ExampleApp.swift in Sources */,
 			);
