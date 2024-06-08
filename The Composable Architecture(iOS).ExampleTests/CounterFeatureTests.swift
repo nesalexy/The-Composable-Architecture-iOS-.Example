@@ -83,6 +83,8 @@ extension CounterFeatureTests {
     func testNumberFact() async {
         let store = TestStore(initialState: CounterFeature.State()) {
             CounterFeature()
+        } withDependencies: {
+            $0.numberFact.fetch = { "\($0)" }
         }
         
         await store.send(.factButtonTapped) {
@@ -91,6 +93,7 @@ extension CounterFeatureTests {
         
         await store.receive(\.factResponse, timeout: .seconds(1)) {
             $0.isLoading = false
+            $0.fact = "0"
         }
         
     }

@@ -11,8 +11,6 @@
 		787653B52C1364410086FBFC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 787653B42C1364410086FBFC /* Assets.xcassets */; };
 		787653B82C1364410086FBFC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 787653B72C1364410086FBFC /* Preview Assets.xcassets */; };
 		787653C22C1364410086FBFC /* The_Composable_Architecture_iOS__ExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787653C12C1364410086FBFC /* The_Composable_Architecture_iOS__ExampleTests.swift */; };
-		787653CC2C1364410086FBFC /* The_Composable_Architecture_iOS__ExampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787653CB2C1364410086FBFC /* The_Composable_Architecture_iOS__ExampleUITests.swift */; };
-		787653CE2C1364410086FBFC /* The_Composable_Architecture_iOS__ExampleUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787653CD2C1364410086FBFC /* The_Composable_Architecture_iOS__ExampleUITestsLaunchTests.swift */; };
 		787653DC2C13682D0086FBFC /* CounterFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787653DB2C13682D0086FBFC /* CounterFeature.swift */; };
 		787653DF2C1369570086FBFC /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 787653DE2C1369570086FBFC /* ComposableArchitecture */; };
 		787653E42C14782F0086FBFC /* CounterFeatureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787653E32C14782F0086FBFC /* CounterFeatureTests.swift */; };
@@ -21,13 +19,6 @@
 
 /* Begin PBXContainerItemProxy section */
 		787653BE2C1364410086FBFC /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 787653A52C13643F0086FBFC /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 787653AC2C13643F0086FBFC;
-			remoteInfo = "The Composable Architecture(iOS).Example";
-		};
-		787653C82C1364410086FBFC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 787653A52C13643F0086FBFC /* Project object */;
 			proxyType = 1;
@@ -43,9 +34,6 @@
 		787653B72C1364410086FBFC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		787653BD2C1364410086FBFC /* The Composable Architecture(iOS).ExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "The Composable Architecture(iOS).ExampleTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		787653C12C1364410086FBFC /* The_Composable_Architecture_iOS__ExampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = The_Composable_Architecture_iOS__ExampleTests.swift; sourceTree = "<group>"; };
-		787653C72C1364410086FBFC /* The Composable Architecture(iOS).ExampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "The Composable Architecture(iOS).ExampleUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		787653CB2C1364410086FBFC /* The_Composable_Architecture_iOS__ExampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = The_Composable_Architecture_iOS__ExampleUITests.swift; sourceTree = "<group>"; };
-		787653CD2C1364410086FBFC /* The_Composable_Architecture_iOS__ExampleUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = The_Composable_Architecture_iOS__ExampleUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		787653DB2C13682D0086FBFC /* CounterFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterFeature.swift; sourceTree = "<group>"; };
 		787653E22C144E450086FBFC /* The-Composable-Architecture-iOS--Example-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "The-Composable-Architecture-iOS--Example-Info.plist"; sourceTree = SOURCE_ROOT; };
 		787653E32C14782F0086FBFC /* CounterFeatureTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterFeatureTests.swift; sourceTree = "<group>"; };
@@ -68,13 +56,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		787653C42C1364410086FBFC /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -83,7 +64,6 @@
 			children = (
 				787653AF2C13643F0086FBFC /* The Composable Architecture(iOS).Example */,
 				787653C02C1364410086FBFC /* The Composable Architecture(iOS).ExampleTests */,
-				787653CA2C1364410086FBFC /* The Composable Architecture(iOS).ExampleUITests */,
 				787653AE2C13643F0086FBFC /* Products */,
 				787653DD2C1369570086FBFC /* Frameworks */,
 			);
@@ -94,7 +74,6 @@
 			children = (
 				787653AD2C13643F0086FBFC /* The Composable Architecture(iOS).Example.app */,
 				787653BD2C1364410086FBFC /* The Composable Architecture(iOS).ExampleTests.xctest */,
-				787653C72C1364410086FBFC /* The Composable Architecture(iOS).ExampleUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -127,15 +106,6 @@
 				787653E32C14782F0086FBFC /* CounterFeatureTests.swift */,
 			);
 			path = "The Composable Architecture(iOS).ExampleTests";
-			sourceTree = "<group>";
-		};
-		787653CA2C1364410086FBFC /* The Composable Architecture(iOS).ExampleUITests */ = {
-			isa = PBXGroup;
-			children = (
-				787653CB2C1364410086FBFC /* The_Composable_Architecture_iOS__ExampleUITests.swift */,
-				787653CD2C1364410086FBFC /* The_Composable_Architecture_iOS__ExampleUITestsLaunchTests.swift */,
-			);
-			path = "The Composable Architecture(iOS).ExampleUITests";
 			sourceTree = "<group>";
 		};
 		787653DD2C1369570086FBFC /* Frameworks */ = {
@@ -188,24 +158,6 @@
 			productReference = 787653BD2C1364410086FBFC /* The Composable Architecture(iOS).ExampleTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		787653C62C1364410086FBFC /* The Composable Architecture(iOS).ExampleUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 787653D72C1364410086FBFC /* Build configuration list for PBXNativeTarget "The Composable Architecture(iOS).ExampleUITests" */;
-			buildPhases = (
-				787653C32C1364410086FBFC /* Sources */,
-				787653C42C1364410086FBFC /* Frameworks */,
-				787653C52C1364410086FBFC /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				787653C92C1364410086FBFC /* PBXTargetDependency */,
-			);
-			name = "The Composable Architecture(iOS).ExampleUITests";
-			productName = "The Composable Architecture(iOS).ExampleUITests";
-			productReference = 787653C72C1364410086FBFC /* The Composable Architecture(iOS).ExampleUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -220,10 +172,6 @@
 						CreatedOnToolsVersion = 15.3;
 					};
 					787653BC2C1364410086FBFC = {
-						CreatedOnToolsVersion = 15.3;
-						TestTargetID = 787653AC2C13643F0086FBFC;
-					};
-					787653C62C1364410086FBFC = {
 						CreatedOnToolsVersion = 15.3;
 						TestTargetID = 787653AC2C13643F0086FBFC;
 					};
@@ -247,7 +195,6 @@
 			targets = (
 				787653AC2C13643F0086FBFC /* The Composable Architecture(iOS).Example */,
 				787653BC2C1364410086FBFC /* The Composable Architecture(iOS).ExampleTests */,
-				787653C62C1364410086FBFC /* The Composable Architecture(iOS).ExampleUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -263,13 +210,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		787653BB2C1364410086FBFC /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		787653C52C1364410086FBFC /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -298,15 +238,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		787653C32C1364410086FBFC /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				787653CE2C1364410086FBFC /* The_Composable_Architecture_iOS__ExampleUITestsLaunchTests.swift in Sources */,
-				787653CC2C1364410086FBFC /* The_Composable_Architecture_iOS__ExampleUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -314,11 +245,6 @@
 			isa = PBXTargetDependency;
 			target = 787653AC2C13643F0086FBFC /* The Composable Architecture(iOS).Example */;
 			targetProxy = 787653BE2C1364410086FBFC /* PBXContainerItemProxy */;
-		};
-		787653C92C1364410086FBFC /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 787653AC2C13643F0086FBFC /* The Composable Architecture(iOS).Example */;
-			targetProxy = 787653C82C1364410086FBFC /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -538,40 +464,6 @@
 			};
 			name = Release;
 		};
-		787653D82C1364410086FBFC /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "nesterchuk.oleksii.The-Composable-Architecture-iOS--ExampleUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "The Composable Architecture(iOS).Example";
-			};
-			name = Debug;
-		};
-		787653D92C1364410086FBFC /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "nesterchuk.oleksii.The-Composable-Architecture-iOS--ExampleUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "The Composable Architecture(iOS).Example";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -598,15 +490,6 @@
 			buildConfigurations = (
 				787653D52C1364410086FBFC /* Debug */,
 				787653D62C1364410086FBFC /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		787653D72C1364410086FBFC /* Build configuration list for PBXNativeTarget "The Composable Architecture(iOS).ExampleUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				787653D82C1364410086FBFC /* Debug */,
-				787653D92C1364410086FBFC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
